@@ -1,0 +1,11 @@
+node_modules/
+dist/
+test-results/
+playwright-report/
+*.local
+.vercel/
+*.tsbuildinfo
+artifacts/*
+!artifacts/welcome-1440.jpg
+artifacts/research/mocha.html
+artifacts/research/mocha.css
