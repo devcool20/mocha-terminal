@@ -171,6 +171,7 @@
   overflow: hidden;
   aspect-ratio: 1.48;
   background: #100e0c;
+  position: relative;
 }
 
 .preview-image-wrap img {
@@ -179,6 +180,7 @@
   height: 100%;
   object-fit: cover;
   object-position: top center;
+  clip-path: inset(0 9px 0 0);
 }
 
 .welcome-preview figcaption {
@@ -198,58 +200,6 @@
   color: #c6805e;
   font-family: "Geist Mono", monospace;
   letter-spacing: 0.025em;
-}
-
-.welcome-capabilities {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  border-top: 1px solid #302a26;
-  border-bottom: 1px solid #302a26;
-}
-
-.capability {
-  min-height: 120px;
-  display: grid;
-  grid-template-columns: 31px 1fr;
-  gap: 13px;
-  align-content: start;
-  padding: 21px 24px 19px 3px;
-}
-
-.capability + .capability {
-  border-left: 1px solid #302a26;
-  padding-left: 23px;
-}
-
-.capability-index {
-  padding-top: 2px;
-  color: #bb7653;
-  font-family: "Geist Mono", monospace;
-  font-size: 10px;
-}
-
-.capability h2 {
-  margin: 0 0 8px;
-  color: #e6dfd8;
-  font-size: 13px;
-  font-weight: 500;
-}
-
-.capability p {
-  max-width: 340px;
-  margin: 0;
-  color: #a49c95;
-  font-size: 11px;
-  line-height: 1.65;
-}
-
-.welcome-footer {
-  display: flex;
-  justify-content: space-between;
-  gap: 24px;
-  padding: 17px 2px 20px;
-  color: #8f8881;
-  font-size: 9px;
 }
 
 .route-loading {

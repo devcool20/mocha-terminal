@@ -5,21 +5,6 @@ type LandingProps = {
   onOpen: (event: MouseEvent<HTMLAnchorElement>) => void;
 };
 
-const capabilities = [
-  {
-    title: "Read the setup",
-    copy: "See margin, leverage, fees, funding, and estimated liquidation before you place a paper order.",
-  },
-  {
-    title: "Work through a market",
-    copy: "Use NVDA, TSLA, AAPL, or META. Follow public reference quotes or replay four repeatable scenarios.",
-  },
-  {
-    title: "Manage the whole position",
-    copy: "Place market or limit orders, add exits, close in parts, then review or export the simulated result.",
-  },
-];
-
 export default function Landing({ onOpen }: LandingProps) {
   return (
     <div className="welcome-page">
@@ -61,22 +46,6 @@ export default function Landing({ onOpen }: LandingProps) {
           </figure>
         </section>
 
-        <section className="welcome-capabilities" aria-label="Practice Lab features">
-          {capabilities.map((capability, index) => (
-            <article className="capability" key={capability.title}>
-              <span className="capability-index">0{index + 1}</span>
-              <div>
-                <h2>{capability.title}</h2>
-                <p>{capability.copy}</p>
-              </div>
-            </article>
-          ))}
-        </section>
-
-        <footer className="welcome-footer">
-          <span>Reference quotes are informational; simulated orders never reach a venue.</span>
-          <span>Built as an independent Mocha concept demo.</span>
-        </footer>
       </main>
     </div>
   );
