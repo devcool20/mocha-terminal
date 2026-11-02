@@ -1,0 +1,19 @@
+src/landing.css
+  s_3f7a4737358347::t_fbb6fbdaffd311 174,183
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "9995c5c690a0c1e42ad32befb958d4da903ae373",
+  "prompts": {},
+  "sessions": {
+    "s_3f7a4737358347": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a19ce2-1ffa-7e71-8038-394789206cd9",
+        "model": "gpt-6-luna"
+      },
+      "human_author": "devcool20 <sharmadivyanshu265@gmail.com>"
+    }
+  }
+}
