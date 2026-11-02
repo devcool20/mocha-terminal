@@ -1,0 +1,89 @@
+.gitignore
+  s_3f7a4737358347::t_4ca8a935e97fdd 1-11
+README.md
+  s_3f7a4737358347::t_4ca8a935e97fdd 1-73
+DESIGN.md
+  s_3f7a4737358347::t_2257f5685f1a97 1-9
+PRODUCT.md
+  s_3f7a4737358347::t_055a6dbc46d00d 1-15
+index.html
+  s_3f7a4737358347::t_2cf4854d0e3d16 1-17
+package-lock.json
+  s_3f7a4737358347::t_74f5b02cb1c402 1-3953
+package.json
+  s_3f7a4737358347::t_00796d902d845a 1-40
+public/brand/aapl.svg
+  s_3f7a4737358347::t_28c990a7bbb8b9 1
+public/brand/meta.svg
+  s_3f7a4737358347::t_15d89510caea15 1
+public/brand/mocha-mark.svg
+  s_3f7a4737358347::t_c4ad25cfa015a6 1-8
+public/brand/mocha-wordmark.svg
+  s_3f7a4737358347::t_9fffa8bc7a674c 1-8
+public/brand/nvda.svg
+  s_3f7a4737358347::t_8fadacc58e9b85 1
+public/brand/tsla.svg
+  s_3f7a4737358347::t_62059e094796e0 1
+src/App.tsx
+  s_3f7a4737358347::t_bebe4b238ef4d9 1-1896
+src/Chart.tsx
+  s_3f7a4737358347::t_8757f56c800781 1-339
+src/ErrorBoundary.tsx
+  s_3f7a4737358347::t_c4d15758b676a5 1-26
+src/Modal.tsx
+  s_3f7a4737358347::t_89fc92193b6ccd 1-35
+src/OrderBook.tsx
+  s_3f7a4737358347::t_0bacec51dbdcdd 1-140
+src/PositionRow.tsx
+  s_3f7a4737358347::t_b2d3fd6d81b9db 1-56
+src/Range.tsx
+  s_3f7a4737358347::t_aa3b15e4a28b8d 1-23
+src/ScenarioTrace.tsx
+  s_3f7a4737358347::t_fcf454001e4950 1-47
+src/book.test.ts
+  s_3f7a4737358347::t_923326e2d10ef2 1-74
+src/book.ts
+  s_3f7a4737358347::t_89dce13e6d5df6 1-95
+src/data.ts
+  s_3f7a4737358347::t_3aa0e59aaf435f 1-285
+src/desktop.css
+  s_3f7a4737358347::t_f1bffc9500f3c9 1-1997
+src/engine.test.ts
+  s_3f7a4737358347::t_cc2bd77b49e164 1-153
+src/engine.ts
+  s_3f7a4737358347::t_73eb7ac110ae1f 1-479
+src/export.ts
+  s_3f7a4737358347::t_3973690e383652 1-126
+src/icons.tsx
+  s_3f7a4737358347::t_87a42489ef7a0a 1-70
+src/motion-features.ts
+  s_3f7a4737358347::t_c3b63b6e98f283 1-2
+src/motion.css
+  s_3f7a4737358347::t_cebbcdecdf6ba9 1-695
+src/persistence.test.ts
+  s_3f7a4737358347::t_adfb7501d13bfa 1-44
+src/store.ts
+  s_3f7a4737358347::t_b90a33c9a6039e 1-170
+src/style.css
+  s_3f7a4737358347::t_5d9c670ecc833a 1-2
+tsconfig.json
+  s_3f7a4737358347::t_097c46dffd2700 1-16
+vite.config.ts
+  s_3f7a4737358347::t_172cbf4aab8a0b 1-28
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "d9e0e1ad52f8dd2e28bf6984b96c5c33ac27b0d0",
+  "prompts": {},
+  "sessions": {
+    "s_3f7a4737358347": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a19ce2-1ffa-7e71-8038-394789206cd9",
+        "model": "gpt-6-luna"
+      },
+      "human_author": "devcool20 <sharmadivyanshu265@gmail.com>"
+    }
+  }
+}
