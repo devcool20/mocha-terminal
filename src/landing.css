@@ -220,3 +220,13 @@
 
 .interactive-preview { padding:24px; height:100%; background:#13110f; }
 .preview-market {display:flex;gap:10px;align-items:center;font-size:16px}.preview-market img{width:24px;height:24px}.preview-market span{margin-left:auto;font-size:9px;color:#a59b91}.preview-quote{font:25px "Geist Mono";margin-top:16px}.preview-quote small{font-size:11px;color:#86b797}.interactive-preview>svg{width:100%;height:52%;margin:12px 0}.preview-price-path{stroke-dasharray:700;animation:preview-chart 7s linear infinite}.preview-trade{display:flex;gap:16px;align-items:center}.preview-trade .side-toggle{display:flex;gap:8px}.preview-trade .side-toggle button{padding:9px 22px;border-radius:3px}.preview-trade>.primary{margin-left:auto}.preview-feedback{color:#aaa096;font-size:10px;margin-top:15px}@keyframes preview-chart{from{stroke-dashoffset:700}to{stroke-dashoffset:0}}@media(prefers-reduced-motion:reduce){.preview-price-path{animation:none}}
+
+.terminal-preview-frame { position:absolute;left:0;top:0;border:0;transform-origin:top left;background:#0b0908; }
+.embedded-terminal { scrollbar-width:none; }
+.embedded-terminal::-webkit-scrollbar,.embedded-terminal *::-webkit-scrollbar { display:none; }
+.embedded-terminal button,.embedded-terminal button::before,.embedded-terminal button::after { animation:none!important;transition:none!important;transform:none!important;text-shadow:none!important;box-shadow:none!important; }
+.embedded-terminal button::before,.embedded-terminal button::after { content:none!important; }
+.embedded-terminal .primary { background:#b6532e!important;border:1px solid #c87954; }
+.embedded-terminal .side-toggle .long-active { background:#344f38!important; }
+.embedded-terminal .side-toggle .short-active { background:#633c30!important; }
+.embedded-terminal .mode-switch button.active {background:#382b23!important;}
