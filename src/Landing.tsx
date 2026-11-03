@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState, type MouseEvent } from "react";
+import { type MouseEvent } from "react";
+import TerminalPreview from "./TerminalPreview";
 import { ArrowRight, Coffee } from "./icons";
 
 type LandingProps = {
@@ -6,9 +7,6 @@ type LandingProps = {
 };
 
 export default function Landing({ onOpen }: LandingProps) {
- const previewRef = useRef<HTMLDivElement>(null);
- const [scale,setScale] = useState(0.48);
- useEffect(() => { const element=previewRef.current; if(!element)return; const observer=new ResizeObserver(()=>setScale(element.clientWidth/1440)); observer.observe(element); return ()=>observer.disconnect(); },[]);
   return (
     <div className="welcome-page">
       <main className="welcome-main">
@@ -35,12 +33,10 @@ export default function Landing({ onOpen }: LandingProps) {
               <span className="preview-address">mochatrade.com / practice-lab</span>
               <span className="preview-mode">SIMULATED</span>
             </div>
-            <div className="preview-image-wrap terminal-preview-wrap" ref={previewRef}>
-              <iframe title="Interactive Practice Lab terminal — separate demo wallet" src="/terminal?embed=1" className="terminal-preview-frame" style={{width:1440,height:1440/1.48,transform:`scale(${scale})`}} />
-            </div>
+            <div className="preview-image-wrap"><TerminalPreview /></div>
             <figcaption>
               <span>THE PRACTICE DESK</span>
-              <span>INTERACTIVE · SCROLL TO EXPLORE</span>
+              <span>INTERACTIVE PREVIEW · EXAMPLE DATA</span>
             </figcaption>
           </figure>
         </section>

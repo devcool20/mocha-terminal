@@ -9,7 +9,6 @@ import Landing from "./Landing";
 import { ErrorBoundary } from "./ErrorBoundary";
 import "./style.css";
 import "./landing.css";
-if (new URLSearchParams(location.search).get("embed") === "1") document.documentElement.classList.add("embedded-terminal");
 const client = new QueryClient({
   defaultOptions: { queries: { refetchOnWindowFocus: false } },
 });

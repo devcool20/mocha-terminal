@@ -67,10 +67,8 @@ const persistedSchema = z.object({
   saved: z.array(z.string()).max(12),
 });
 export let storageRecovered = false;
-const embedded = new URLSearchParams(location.search).get("embed") === "1";
 const storage = {
   getItem: (key: string) => {
-    if (embedded) return null;
     try {
       const raw = localStorage.getItem(key);
       if (raw) JSON.parse(raw);
@@ -84,7 +82,6 @@ const storage = {
     }
   },
   setItem: (key: string, value: string) => {
-    if (embedded) return;
     try {
       localStorage.setItem(key, value);
     } catch {
@@ -92,7 +89,6 @@ const storage = {
     }
   },
   removeItem: (key: string) => {
-    if (embedded) return;
     try {
       localStorage.removeItem(key);
     } catch {}
