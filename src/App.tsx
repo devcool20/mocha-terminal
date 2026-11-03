@@ -47,6 +47,7 @@ import {
   cancel,
   close,
   FX,
+  TAKER,
   gross,
   metrics,
   newSession,
@@ -1364,7 +1365,7 @@ export default function App() {
                             gross(p, px) -
                             p.funding -
                             p.openingFee -
-                            p.quantity * px * 0.0005;
+                            p.quantity * px * TAKER;
                         return (
                           <PositionRow
                             key={p.id}
@@ -1403,6 +1404,16 @@ export default function App() {
                               <small>
                                 {((pnl / p.margin) * 100).toFixed(2)}%
                               </small>
+                              <details className="pnl-breakdown">
+                                <summary>Gross {money(gross(p, px), currency)} · costs</summary>
+                                <dl>
+                                  <dt>Price P&amp;L</dt><dd>{money(gross(p, px), currency)}</dd>
+                                  <dt>Opening fee paid</dt><dd>−{money(p.openingFee, currency)}</dd>
+                                  <dt>Est. closing fee</dt><dd>−{money(p.quantity * px * TAKER, currency)}</dd>
+                                  <dt>Funding {p.funding >= 0 ? "paid" : "received"}</dt><dd>{p.funding >= 0 ? "−" : "+"}{money(Math.abs(p.funding), currency)}</dd>
+                                </dl>
+                                <p>Net includes the opening fee already paid and the estimated cost to close now.</p>
+                              </details>
                             </td>
                             <td>
                               {money(p.margin, currency)}

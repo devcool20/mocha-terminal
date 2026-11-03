@@ -1995,3 +1995,5 @@ td.negative small {
   min-width: 24px;
   min-height: 26px;
 }
+
+.pnl-breakdown { color:#b9afa4;font-size:9px;margin-top:6px;max-width:240px;white-space:normal; }.pnl-breakdown summary{cursor:pointer;color:#c9b6a2;}.pnl-breakdown dl{display:grid;grid-template-columns:1fr auto;gap:6px 14px;margin:10px 0}.pnl-breakdown dd{margin:0;font-family:"Geist Mono"}.pnl-breakdown p{font-size:9px;line-height:1.5;color:#a99e93}

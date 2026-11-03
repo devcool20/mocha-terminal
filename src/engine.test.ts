@@ -151,3 +151,11 @@ describe("isolated paper engine", () => {
     expect(s.cash - newSession().cash).toBeCloseTo(-0.5, 8);
   });
 });
+
+it("explains the TSLA hedge screenshot: positive gross can remain negative after fees", () => {
+  const long = metrics({ ...trade, symbol: "TSLA", margin: 10000 / FX, leverage: 10 }, 397.52, 397.73);
+  const short = metrics({ ...trade, symbol: "TSLA", side: "short", margin: 10000 / FX, leverage: 10 }, 397.51, 397.73);
+  expect(long.gross * FX).toBeCloseTo(52.8275, 2);
+  expect(long.net * FX).toBeCloseTo(-47.20, 2);
+  expect(short.net * FX).toBeCloseTo(-155.37, 2);
+});
