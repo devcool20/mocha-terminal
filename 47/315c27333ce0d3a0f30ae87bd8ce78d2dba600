@@ -1,0 +1,23 @@
+src/Landing.tsx
+  s_3f7a4737358347::t_97e76e0f483ad1 1-2,36,39
+src/TerminalPreview.tsx
+  s_3f7a4737358347::t_f026af4958c533 1-17
+src/landing.css
+  s_3f7a4737358347::t_cd6514c4a72722 221
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "47315c27333ce0d3a0f30ae87bd8ce78d2dba600",
+  "prompts": {},
+  "sessions": {
+    "s_3f7a4737358347": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a19ce2-1ffa-7e71-8038-394789206cd9",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "devcool20 <sharmadivyanshu265@gmail.com>"
+    }
+  }
+}
