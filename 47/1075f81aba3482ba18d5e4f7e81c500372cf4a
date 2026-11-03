@@ -1,0 +1,23 @@
+src/App.tsx
+  s_3f7a4737358347::t_43e3a134a3c9ef 50,1368,1407-1416
+src/engine.test.ts
+  s_3f7a4737358347::t_7b702e9abf2fa2 154-161
+src/desktop.css
+  s_3f7a4737358347::t_43e3a134a3c9ef 1998-1999
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "471075f81aba3482ba18d5e4f7e81c500372cf4a",
+  "prompts": {},
+  "sessions": {
+    "s_3f7a4737358347": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a19ce2-1ffa-7e71-8038-394789206cd9",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "devcool20 <sharmadivyanshu265@gmail.com>"
+    }
+  }
+}
