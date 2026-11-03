@@ -2,15 +2,23 @@
   --welcome-ink: #e7e2dc;
   min-height: 100vh;
   background:
-    radial-gradient(ellipse at 80% 18%, rgba(153, 76, 40, 0.105), transparent 31rem),
+    radial-gradient(
+      ellipse at 80% 18%,
+      rgba(153, 76, 40, 0.105),
+      transparent 31rem
+    ),
     #0b0908;
   color: var(--welcome-ink);
   animation: welcome-arrive 420ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 @keyframes welcome-arrive {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .welcome-main {
@@ -33,8 +41,14 @@
 }
 
 @keyframes welcome-copy-arrive {
-  from { opacity: 0; transform: translateY(9px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(9px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .welcome-mark {
@@ -85,7 +99,10 @@
   padding: 0 17px 0 19px;
   font-size: 13px;
   border-radius: 4px;
-  box-shadow: inset 0 1px 0 #ffffff35, inset 0 -2px 0 #0005, 0 3px 0 #4c281b;
+  box-shadow:
+    inset 0 1px 0 #ffffff35,
+    inset 0 -2px 0 #0005,
+    0 3px 0 #4c281b;
 }
 
 .welcome-launch svg {
@@ -125,13 +142,21 @@
   border: 1px solid #38302b;
   border-radius: 5px;
   background: #100e0c;
-  box-shadow: 0 0 0 1px #0a0807, 0 14px 42px -28px #bd633c66;
+  box-shadow:
+    0 0 0 1px #0a0807,
+    0 14px 42px -28px #bd633c66;
   animation: preview-arrive 650ms 110ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 @keyframes preview-arrive {
-  from { opacity: 0; transform: translateY(12px) scale(0.992); }
-  to { opacity: 1; transform: translateY(0) scale(1); }
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.992);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 .preview-chrome {
@@ -174,15 +199,6 @@
   position: relative;
 }
 
-.preview-image-wrap img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
-  clip-path: inset(0 9px 0 0);
-}
-
 .welcome-preview figcaption {
   min-height: 31px;
   display: flex;
@@ -208,14 +224,258 @@
 }
 
 @media (max-width: 1240px) {
-  .welcome-main { width: calc(100% - 64px); }
-  .welcome-hero { grid-template-columns: minmax(360px, 0.84fr) minmax(480px, 1.16fr); gap: 42px; }
-  .welcome-copy h1 { font-size: 45px; }
+  .welcome-main {
+    width: calc(100% - 64px);
+  }
+  .welcome-hero {
+    grid-template-columns: minmax(360px, 0.84fr) minmax(480px, 1.16fr);
+    gap: 42px;
+  }
+  .welcome-copy h1 {
+    font-size: 45px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .welcome-page, .welcome-copy, .welcome-preview { animation: none; }
-  .welcome-launch svg { transition: none; }
+  .welcome-page,
+  .welcome-copy,
+  .welcome-preview {
+    animation: none;
+  }
+  .welcome-launch svg {
+    transition: none;
+  }
 }
 
-.mini-terminal{height:100%;display:flex;flex-direction:column;background:#13110f;color:#c7bfb7;font-size:10px}.mini-heading{height:37px;display:flex;align-items:center;gap:18px;padding:0 12px;border-bottom:1px solid #2c2723}.mini-heading img{width:90px}.mini-heading small{margin-left:auto;font-size:7px;color:#b48769}.mini-balance{display:flex;justify-content:space-between;padding:12px 15px;border-bottom:1px solid #2c2723;color:#9f958b;font-size:8px}.mini-balance b{display:block;color:#e1d7cd;font:11px 'Geist Mono';margin-top:5px}.mini-workspace{display:grid;grid-template-columns:79px minmax(0,1fr) 151px;flex:1;min-height:0}.mini-markets{padding:12px 5px;border-right:1px solid #2b2622}.mini-markets>span{font-size:7px;padding-left:5px;color:#998f85}.mini-terminal button{animation:none!important;transition:none!important;box-shadow:none!important;text-shadow:none!important;transform:none!important;border-radius:2px;color:#b7ada2;background:transparent;border:1px solid #39302a;padding:6px;cursor:pointer}.mini-terminal button::before,.mini-terminal button::after{content:none!important}.mini-terminal button:hover{background:#29221c}.mini-terminal button[aria-pressed=true]{background:#382b22;border-color:#806047;color:#eed5be}.mini-markets button{display:flex;align-items:center;gap:6px;width:100%;margin-top:10px;border-color:transparent;font-size:8px}.mini-markets button img{width:13px;height:13px}.mini-chart{padding:14px 10px 10px;min-width:0;display:flex;flex-direction:column}.mini-price{font-size:11px;color:#e7ded4}.mini-price b{float:right;font:14px 'Geist Mono'}.mini-price small{display:block;font-size:7px;color:#a3978c;margin-top:5px}.mini-chart svg{width:100%;flex:1;min-height:80px}.mini-scenarios{display:flex;gap:4px}.mini-scenarios button{flex:1;font-size:7px;padding:6px 2px}.mini-ticket{padding:14px 10px;border-left:1px solid #2b2622;display:flex;flex-direction:column;gap:12px}.mini-ticket>strong{font-size:10px}.mini-sides{display:flex;gap:4px}.mini-sides button{width:50%;font-size:9px}.mini-ticket label{font-size:9px}.mini-ticket label b{float:right;font:10px 'Geist Mono'}.mini-ticket input{display:block;width:100%;margin:12px 0 0;accent-color:#d49a70}.mini-ticket dl{display:grid;grid-template-columns:1fr auto;font-size:8px;row-gap:12px;margin:0}.mini-ticket dd{margin:0;font-family:'Geist Mono'}.mini-ticket dt{color:#a99b8e}.mini-result-label{font-size:8px;margin-top:4px}.mini-ticket>b{font:17px 'Geist Mono'}.mini-ticket>small{font-size:7px;color:#a99b8e}.mini-note{padding:10px 12px;border-top:1px solid #2b2622;color:#ab9b8d;font-size:8px}.mini-trace{stroke-dasharray:450;animation:mini-draw 1.2s ease-out both}@keyframes mini-draw{from{stroke-dashoffset:450}to{stroke-dashoffset:0}}@media(prefers-reduced-motion:reduce){.mini-trace{animation:none}}
+.mini-terminal {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #13110f;
+  color: #c7bfb7;
+  font-size: 10px;
+}
+.mini-heading {
+  height: 37px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 0 12px;
+  border-bottom: 1px solid #2c2723;
+}
+.mini-heading img {
+  width: 90px;
+}
+.mini-heading small {
+  margin-left: auto;
+  font-size: 7px;
+  color: #b48769;
+}
+.mini-balance {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 15px;
+  border-bottom: 1px solid #2c2723;
+  color: #9f958b;
+  font-size: 8px;
+}
+.mini-balance b {
+  display: block;
+  color: #e1d7cd;
+  font: 11px "Geist Mono";
+  margin-top: 5px;
+}
+.mini-workspace {
+  display: grid;
+  grid-template-columns: 79px minmax(0, 1fr) 151px;
+  flex: 1;
+  min-height: 0;
+}
+.mini-markets {
+  padding: 12px 5px;
+  border-right: 1px solid #2b2622;
+}
+.mini-markets > span {
+  font-size: 7px;
+  padding-left: 5px;
+  color: #998f85;
+}
+.mini-terminal button {
+  animation: none !important;
+  transition: none !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  transform: none !important;
+  border-radius: 2px;
+  color: #b7ada2;
+  background: transparent;
+  border: 1px solid #39302a;
+  padding: 6px;
+  cursor: pointer;
+}
+.mini-terminal button::before,
+.mini-terminal button::after {
+  content: none !important;
+}
+.mini-terminal button:hover {
+  background: #29221c;
+}
+.mini-terminal button[aria-pressed="true"] {
+  background: #382b22;
+  border-color: #806047;
+  color: #eed5be;
+}
+.mini-markets button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  margin-top: 10px;
+  border-color: transparent;
+  font-size: 8px;
+}
+.mini-markets button img {
+  width: 13px;
+  height: 13px;
+}
+.mini-chart {
+  padding: 14px 10px 10px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+.mini-price {
+  font-size: 11px;
+  color: #e7ded4;
+}
+.mini-price b {
+  float: right;
+  font: 14px "Geist Mono";
+}
+.mini-price small {
+  display: block;
+  font-size: 7px;
+  color: #a3978c;
+  margin-top: 5px;
+}
+.mini-chart svg {
+  width: 100%;
+  flex: 1;
+  min-height: 80px;
+}
+.mini-scenarios {
+  display: flex;
+  gap: 4px;
+}
+.mini-scenarios button {
+  flex: 1;
+  font-size: 7px;
+  padding: 6px 2px;
+}
+.mini-ticket {
+  padding: 14px 10px;
+  border-left: 1px solid #2b2622;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.mini-ticket > strong {
+  font-size: 10px;
+}
+.mini-sides {
+  display: flex;
+  gap: 4px;
+}
+.mini-sides button {
+  width: 50%;
+  font-size: 9px;
+}
+.mini-ticket label {
+  font-size: 9px;
+}
+.mini-ticket label b {
+  float: right;
+  font: 10px "Geist Mono";
+}
+.mini-ticket input {
+  display: block;
+  width: 100%;
+  margin: 12px 0 0;
+  accent-color: #d49a70;
+}
+.mini-ticket dl {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  font-size: 8px;
+  row-gap: 12px;
+  margin: 0;
+}
+.mini-ticket dd {
+  margin: 0;
+  font-family: "Geist Mono";
+}
+.mini-ticket dt {
+  color: #a99b8e;
+}
+.mini-result-label {
+  font-size: 8px;
+  margin-top: 4px;
+}
+.mini-ticket > b {
+  font: 17px "Geist Mono";
+}
+.mini-ticket > small {
+  font-size: 7px;
+  color: #a99b8e;
+}
+.mini-note {
+  padding: 10px 12px;
+  border-top: 1px solid #2b2622;
+  color: #ab9b8d;
+  font-size: 8px;
+}
+.mini-trace {
+  stroke-dasharray: 450;
+  animation: mini-draw 1.2s ease-out both;
+}
+@keyframes mini-draw {
+  from {
+    stroke-dashoffset: 450;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mini-trace {
+    animation: none;
+  }
+}
+
+.mini-heading {
+  flex-shrink: 0;
+  min-height: 37px;
+}
+.mini-heading img {
+  display: block;
+  width: 90px;
+  height: 20px;
+  object-fit: contain;
+  flex: none;
+}
+.mini-markets button img {
+  display: block;
+  width: 13px;
+  height: 13px;
+  object-fit: contain;
+  flex: none;
+}
+.mini-ticket .range-shell {
+  margin: 12px 0 0;
+}
+.mini-ticket .range-control {
+  margin: 0;
+}
+.mini-workspace {
+  overflow: hidden;
+}
