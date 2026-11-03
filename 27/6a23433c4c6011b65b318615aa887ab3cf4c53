@@ -1,0 +1,25 @@
+src/main.tsx
+  s_3f7a4737358347::t_47dc5bb32e318e 12
+src/landing.css
+  s_3f7a4737358347::t_47dc5bb32e318e 223-232
+src/Landing.tsx
+  s_3f7a4737358347::t_47dc5bb32e318e 1,9-11,38-39,43
+src/store.ts
+  s_3f7a4737358347::t_47dc5bb32e318e 70,73,87,95
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "276a23433c4c6011b65b318615aa887ab3cf4c53",
+  "prompts": {},
+  "sessions": {
+    "s_3f7a4737358347": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a19ce2-1ffa-7e71-8038-394789206cd9",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "devcool20 <sharmadivyanshu265@gmail.com>"
+    }
+  }
+}
