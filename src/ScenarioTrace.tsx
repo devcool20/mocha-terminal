@@ -28,16 +28,19 @@ export function ScenarioTrace({ id }: { id: string }) {
         vectorEffect="non-scaling-stroke"
       />
       <path
-        className="trace-draw"
+        className="trace-synced"
         d={d}
         pathLength="1"
         stroke="currentColor"
         strokeWidth="1.35"
         vectorEffect="non-scaling-stroke"
-      />
+        strokeDasharray="1"
+      >
+        <animate attributeName="stroke-dashoffset" values="1;0" dur="6s" repeatCount="indefinite" calcMode="linear" />
+      </path>
       <circle className="trace-runner" r="1.55" fill="currentColor">
         <animateMotion
-          dur={`${5 + scenarios.findIndex((s) => s.id === id) * 0.4}s`}
+          dur="6s"
           repeatCount="indefinite"
           path={d}
         />

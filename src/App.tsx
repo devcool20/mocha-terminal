@@ -148,6 +148,7 @@ const price = (v: number) =>
       })
     : "—";
 export default function App() {
+  const [railOpen, setRailOpen] = useState(true);
   const state = useStore(),
     {
       mode,
@@ -521,6 +522,7 @@ export default function App() {
         </header>
         <main>
           <section className="account-strip" aria-label="Practice account">
+<button className="rail-toggle" aria-label={railOpen ? "Collapse watchlist" : "Expand watchlist"} aria-expanded={railOpen} onClick={() => setRailOpen(!railOpen)}>{railOpen ? <ChevronLeft size={15} /> : <ChevronRight size={15} />} Markets</button>
             <div className="mode-switch">
               <button
                 className={mode === "scenario" ? "active" : ""}
@@ -564,7 +566,7 @@ export default function App() {
               <RotateCcw size={15} />
             </button>
           </section>
-          <div className={`terminal ${fullscreen ? "terminal-expanded" : ""}`}>
+          <div className={`terminal ${fullscreen ? "terminal-expanded" : ""} ${railOpen ? "" : "rail-collapsed"}`}>
             <aside className="market-rail">
               <div className="rail-title">
                 <h2>Watchlist</h2>

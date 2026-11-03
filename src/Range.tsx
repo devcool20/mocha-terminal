@@ -14,7 +14,7 @@ export function Range({
   return (
     <div
       className="range-shell"
-      style={{ ...style, "--progress": `${pct}%` } as CSSProperties}
+      style={{ ...style, "--progress": `${pct}%`, "--range-ratio": pct / 100 } as CSSProperties}
     >
       <span className="range-fill" aria-hidden="true" />
       <input {...props} type="range" className={`range-control ${className}`} />
