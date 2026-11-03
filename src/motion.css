@@ -699,3 +699,22 @@
 .terminal.rail-collapsed { grid-template-columns: 0 minmax(0,1fr) 310px; }
 .rail-collapsed .market-rail { visibility:hidden; overflow:hidden; padding:0; border:0; }
 .rail-toggle { display:flex; align-items:center; gap:7px; padding:8px 10px; border:1px solid #49392e; border-radius:4px; background:linear-gradient(#29211c,#191511); color:#d9b79d; }
+
+/* A single track: native input paints only the thumb. */
+.range-shell .range-control { padding:0; box-shadow:none; background:transparent!important; }
+.range-control::-webkit-slider-runnable-track { height:17px; background:transparent; border:0; box-shadow:none; }
+.range-control::-moz-range-track,.range-control::-moz-range-progress { background:transparent; border:0; box-shadow:none; }
+.range-shell::before { left:6px; right:6px; box-shadow:none; }
+.range-fill { box-shadow:none; background:#d2a076; }
+.range-fill::after { display:none; }
+.range-control::-webkit-slider-thumb,.range-control:hover::-webkit-slider-thumb,.range-control:focus-visible::-webkit-slider-thumb,.range-control:active::-webkit-slider-thumb { width:12px; height:12px; margin-top:2.5px; transform:none; box-shadow:none; background:#e7c7a4; border:1px solid #f3d7b7; transition:none; }
+.range-control::-moz-range-thumb { width:12px;height:12px;box-shadow:none;transform:none;background:#e7c7a4;border:1px solid #f3d7b7; }
+.leverage-ticks { position:relative;display:block;height:22px;margin-left:6px;margin-right:6px; }
+.leverage-ticks button { position:absolute;top:0;transform:translateX(-50%);white-space:nowrap; }
+.leverage-ticks button:first-child { transform:none; }
+.leverage-ticks button:last-child { transform:translateX(-100%); }
+.leverage-spark { position:relative;isolation:isolate;animation:leverage-glow 650ms ease-out both; }
+.leverage-spark::after { content:"✦";position:absolute;right:-11px;top:-7px;color:#f5d5a2;font-size:11px;pointer-events:none;animation:leverage-star 650ms ease-out both; }
+@keyframes leverage-glow { 0%{text-shadow:0 0 0 transparent}30%{color:#ffe1b5;text-shadow:0 0 10px #e4a76dcc,0 0 18px #bd713c66}100%{text-shadow:none} }
+@keyframes leverage-star { 0%{opacity:0;transform:scale(.3) rotate(-35deg)}35%{opacity:1;transform:scale(1.15) rotate(0)}100%{opacity:0;transform:scale(.6) rotate(40deg)} }
+@media(prefers-reduced-motion:reduce){.leverage-spark,.leverage-spark::after{animation:none}.leverage-spark::after{display:none}}

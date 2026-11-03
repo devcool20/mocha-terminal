@@ -1173,7 +1173,7 @@ export default function App() {
               </div>
               <div className="leverage-label">
                 <label htmlFor="leverage">Leverage</label>
-                <strong>
+                <strong key={leverage} className="leverage-spark">
                   {leverage}
                   <span>×</span>
                 </strong>
@@ -1197,7 +1197,7 @@ export default function App() {
                 {[1, 5, 10, max]
                   .filter((v, i, a) => a.indexOf(v) === i && v <= max)
                   .map((v) => (
-                    <button key={v} onClick={() => setLeverage(v)}>
+                    <button key={v} style={{ left: `${((v - 1) / Math.max(1, max - 1)) * 100}%` }} onClick={() => setLeverage(v)}>
                       {v}×
                     </button>
                   ))}
