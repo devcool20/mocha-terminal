@@ -1997,3 +1997,23 @@ td.negative small {
 }
 
 .pnl-breakdown { color:#b9afa4;font-size:9px;margin-top:6px;max-width:240px;white-space:normal; }.pnl-breakdown summary{cursor:pointer;color:#c9b6a2;}.pnl-breakdown dl{display:grid;grid-template-columns:1fr auto;gap:6px 14px;margin:10px 0}.pnl-breakdown dd{margin:0;font-family:"Geist Mono"}.pnl-breakdown p{font-size:9px;line-height:1.5;color:#a99e93}
+
+/* Terminal navigation: brand and workspace identity, followed by compact utilities. */
+.terminal-header { height:60px;display:flex;align-items:center;gap:0;padding:0 22px;background:#100e0c;border-bottom:1px solid #302a25; }
+.terminal-home { display:flex;align-items:center;padding:5px 0;flex:none; }
+.terminal-home img { width:125px;height:25px;object-fit:contain;display:block; }
+.terminal-identity { margin-left:24px;padding-left:24px;border-left:1px solid #39312a;display:flex;align-items:center;gap:12px; }
+.terminal-identity h1 { font:500 13px Geist,sans-serif;letter-spacing:-.01em;margin:0;color:#eee7de;white-space:nowrap; }
+.terminal-paper { font-size:9px;color:#bdac9c;border:1px solid #49382b;border-radius:3px;padding:3px 6px;background:#241b14;white-space:nowrap; }
+.terminal-utilities { margin-left:auto;display:flex;align-items:center;gap:8px;height:100%; }
+.terminal-learn { display:flex;align-items:center;gap:5px;font-size:11px;color:#a99e93;padding:8px 10px; }
+.utility-divider { height:17px;width:1px;background:#302a25;margin:0 7px; }
+.terminal-utility { display:flex;align-items:center;gap:7px;padding:8px 10px;font-size:11px;color:#b7ada2;border-radius:3px;white-space:nowrap; }
+.terminal-utility svg { color:#96897b; }
+.terminal-utility:hover,.terminal-learn:hover { background:#211b16;color:#eee1d4; }
+.utility-count { font:9px "Geist Mono";color:#e2bb98;min-width:14px;text-align:center; }
+.terminal-currency { display:flex;gap:2px;border:1px solid #393029;border-radius:4px;padding:2px;margin-left:10px;background:#0c0a08; }
+.terminal-currency button { font:10px "Geist Mono";padding:5px 8px;color:#9b8e81;border-radius:2px; }
+.terminal-currency button[aria-pressed="true"] { background:#30271f;color:#eed6be; }
+.terminal-currency button:hover { color:#fff0df; }
+@media(max-width:1240px){.terminal-header{padding:0 16px}.terminal-identity{margin-left:18px;padding-left:18px}.terminal-utilities{gap:2px}.terminal-utility{padding:8px}.terminal-paper{display:none}}

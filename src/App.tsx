@@ -467,59 +467,28 @@ export default function App() {
   return (
     <>
       <div className="app-shell">
-        <header className="topbar">
-          <a
-            className="brand"
-            href="https://mochatrade.com/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src="/brand/mocha-wordmark.svg"
-              alt="Mochatrade"
-              width="142"
-              height="28"
-            />
+        <header className="terminal-header">
+          <a className="terminal-home" href="/" aria-label="Mocha Practice Lab welcome page">
+            <img src="/brand/mocha-wordmark.svg" alt="Mochatrade" width="125" height="25" />
           </a>
-          <nav aria-label="Main navigation">
-            <h1 className="nav-active">Practice Lab</h1>
-            <a href="https://mochatrade.com/" target="_blank" rel="noreferrer">
-              Markets
-            </a>
-            <a
-              href="https://mochatrade.com/learn"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Learn
-            </a>
-          </nav>
-          <div className="top-actions">
-            <span className="practice-label">
-              <span className="dot amber" />
-              Paper account
-            </span>
-            <button className="nav-action" onClick={() => setModal("saved")}>
-              Saved setups{" "}
-              {state.saved.length > 0 && (
-                <span className="count">{state.saved.length}</span>
-              )}
-            </button>
-            <button
-              className="nav-action"
-              onClick={() => setModal("assumptions")}
-            >
-              Model & fees
-            </button>
-            <button
-              className="currency-button"
-              onClick={changeCurrency}
-              aria-label={`Display currency ${currency}. Switch currency`}
-            >
-              {currency === "INR" ? "₹ INR" : "$ USD"}
-              <ChevronDown size={12} />
-            </button>
+          <div className="terminal-identity">
+            <h1>Practice Lab</h1>
+            <span className="terminal-paper">Paper trading</span>
           </div>
+          <nav className="terminal-utilities" aria-label="Terminal utilities">
+            <a className="terminal-learn" href="https://mochatrade.com/learn" target="_blank" rel="noreferrer">Learn <ArrowUpRight size={12} /></a>
+            <span className="utility-divider" aria-hidden="true" />
+            <button className="terminal-utility" onClick={() => setModal("saved")}>
+              <Bookmark size={14} /><span>Saved setups</span>
+              {state.saved.length > 0 && <span className="utility-count">{state.saved.length}</span>}
+            </button>
+            <button className="terminal-utility" onClick={() => setModal("assumptions")}>
+              <CircleHelp size={14} /><span>Model &amp; fees</span>
+            </button>
+            <div className="terminal-currency" role="group" aria-label="Display currency">
+              {(["INR", "USD"] as const).map((unit) => <button key={unit} aria-pressed={currency === unit} onClick={() => { if (currency !== unit) changeCurrency(); }}>{unit}</button>)}
+            </div>
+          </nav>
         </header>
         <main>
           <section className="account-strip" aria-label="Practice account">
